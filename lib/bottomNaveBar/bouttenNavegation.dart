@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/bottomNaveBar/widget.dart';
 
 import 'package:flutter_svg/flutter_svg.dart';
-import '../seccren/HomeScreen/HomeScreen.dart';
+import '../seccren/Home/HomeScreen.dart';
 
 class homeScreen extends StatefulWidget {
   const homeScreen({super.key});

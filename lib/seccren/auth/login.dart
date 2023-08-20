@@ -1,19 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/bottomNaveBar/bouttenNavegation.dart';
 import 'package:flutter_application_1/seccren/auth/widget.dart';
+import 'package:get/get.dart';
 
-class login extends StatefulWidget {
-  login({super.key});
+class loginPage extends StatefulWidget {
+  loginPage({super.key});
 
   @override
-  State<login> createState() => _loginState();
+  State<loginPage> createState() => _loginPageState();
 }
 
-class _loginState extends State<login> {
+class _loginPageState extends State<loginPage> {
   late TextEditingController textFieldController;
   final _formKeyE = GlobalKey<FormState>();
   final _formKeyP = GlobalKey<FormState>();
   @override
   void initState() {
+    super.initState();
     textFieldController = TextEditingController();
   }
 
@@ -39,7 +42,8 @@ class _loginState extends State<login> {
                   right: 0,
                   child: InkWell(
                     onTap: () {
-                      print('done');
+                      Navigator.of(context).pushReplacement(MaterialPageRoute(
+                          builder: (context) => homeScreen()));
                     },
                     child: Container(
                       height: 67,
@@ -121,6 +125,8 @@ class _loginState extends State<login> {
                           }
                         },
                         decoration: InputDecoration(
+                            border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(3)),
                             contentPadding: EdgeInsets.all(10),
                             label: Text(
                               'Email',
@@ -158,6 +164,8 @@ class _loginState extends State<login> {
                           }
                         },
                         decoration: InputDecoration(
+                            border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(3)),
                             contentPadding: EdgeInsets.all(10),
                             label: Text(
                               'Password',
