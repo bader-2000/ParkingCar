@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/bottomNaveBar/bouttenNavegation.dart';
-import 'package:flutter_application_1/seccren/auth/widget.dart';
+import 'package:flutter_application_1/seccren/Auth/widget.dart';
 import 'package:get/get.dart';
 
 class loginPage extends StatefulWidget {

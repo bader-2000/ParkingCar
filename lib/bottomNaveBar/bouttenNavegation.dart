@@ -1,10 +1,7 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/bottomNaveBar/widget.dart';
-
-import 'package:flutter_svg/flutter_svg.dart';
-import '../seccren/Home/HomeScreen.dart';
+import 'package:flutter_application_1/seccren/PagePersonal/PersonalSeccren.dart';
+import '../seccren/PageHome/HomeScreen.dart';
 
 class homeScreen extends StatefulWidget {
   const homeScreen({super.key});
@@ -18,6 +15,7 @@ class _homeScreenState extends State<homeScreen> {
   PageController pageController = PageController();
   @override
   void initState() {
+    super.initState();
     _selectedIndex = 0;
   }
 
@@ -27,8 +25,7 @@ class _homeScreenState extends State<homeScreen> {
     });
     pageController.jumpToPage(_selectedIndex);
     pageController.animateToPage(index,
-        duration: Duration(milliseconds: 132152365350),
-        curve: Curves.easeInCubic);
+        duration: Duration(milliseconds: 13215), curve: Curves.easeInCubic);
   }
 
   @override
@@ -38,9 +35,7 @@ class _homeScreenState extends State<homeScreen> {
         controller: pageController,
         children: [
           HomeScreen(),
-          Container(
-            color: Colors.amber,
-          ),
+          personSeccren(),
           Container(
             color: Colors.black,
           ),

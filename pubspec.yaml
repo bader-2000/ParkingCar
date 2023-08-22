@@ -39,18 +39,13 @@ dependencies:
   flutter_svg: ^2.0.7  
   firebase_core: ^2.15.0
   provider: ^6.0.5
-  flutter_native_splash: ^2.3.2
+  # flutter_native_splash: ^2.3.2
   liquid_swipe: ^3.1.0
   smooth_page_indicator: ^1.1.0
   flutter_launcher_icons: ^0.13.1
   get_storage: ^2.0.3  
   get: ^4.6.1 
-#   flutter_launcher_icons: ^0.13.1
-# flutter_launcher_icons:
-#   android: "launcher_icon"
-#   ios: true
-#   image_path: "assets/icon/icon.png"
-#   min_sdk_android: 21
+  shared_preferences: ^2.2.0
 
 dev_dependencies:
   flutter_test:
@@ -65,11 +60,10 @@ flutter_icons:
 
   
   
-flutter_native_splash:
- color: "#1B9B2C"
- background_image: "assets/images/iconApp.png"
-#   color: "#f5cb42"
-#   image: assets\images\xzxcz.png
+# flutter_native_splash:
+#  color: "#1B9B2C"
+#  background_image: "assets/images/iconApp.png"
+
   
 
 # For information on the generic Dart part of this file, see the

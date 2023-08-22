@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../models/onBordingModels.dart';
+import 'onBordingModels.dart';
 
 class onBordingwidget extends StatelessWidget {
   final onBordingModel model;

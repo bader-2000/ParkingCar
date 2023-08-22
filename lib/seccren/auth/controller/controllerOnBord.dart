@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/seccren/auth/login.dart';
-import 'package:flutter_application_1/seccren/auth/models/contentOnBording.dart';
-import 'package:get/get.dart';
+import 'package:get/get_rx/src/rx_types/rx_types.dart';
+import 'package:get/get_state_manager/src/simple/get_controllers.dart';
 import 'package:liquid_swipe/PageHelpers/LiquidController.dart';
-
-import 'models/onBordingModels.dart';
-import 'Screen/on_Bording_widget.dart';
+import '../../PageSplach/spHelper.dart';
+import '../Screen/login.dart';
+import '../models/contentOnBording.dart';
+import '../models/onBordingModels.dart';
+import '../models/on_Bording_widget.dart';
 
 final ContentOnBording = contentOnBording();
 
@@ -45,12 +46,20 @@ class onBordingControll extends GetxController {
       MaterialPageRoute(builder: (context) => loginPage()), (route) => false);
   animatedToNextSlide(context) {
     int nextPage = controller.currentPage + 1;
-    if (nextPage > 3) {
+    if (nextPage < 3) {
       controller.animateToPage(page: nextPage);
     } else {
-      Navigator.of(context).pushAndRemoveUntil(
-          MaterialPageRoute(builder: (context) => loginPage()),
-          (route) => false);
+      closeOnBoarding(context) {
+        SPHelper.spHelper.storeUserStatus();
+        Navigator.of(context)
+            .pushReplacement(MaterialPageRoute(builder: (BuildContext context) {
+          return loginPage();
+        }));
+      }
+
+      Navigator.of(context).pushReplacement(
+        MaterialPageRoute(builder: (context) => loginPage()),
+      );
     }
   }
 }
