@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/bottomNaveBar/widget.dart';
 import 'package:flutter_application_1/seccren/PagePersonal/PersonalSeccren.dart';
+import '../seccren/PageCheckIn/CheckInSeccren.dart';
+import '../seccren/PageHistory/HistorySeccren.dart';
 import '../seccren/PageHome/HomeScreen.dart';
 
 class homeScreen extends StatefulWidget {
@@ -36,12 +38,8 @@ class _homeScreenState extends State<homeScreen> {
         children: [
           HomeScreen(),
           personSeccren(),
-          Container(
-            color: Colors.black,
-          ),
-          Container(
-            color: Colors.blueGrey,
-          )
+          CheckInSeccren(),
+          HistorySeccren(),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
@@ -60,7 +58,7 @@ class _homeScreenState extends State<homeScreen> {
                     image: 'assets/Icons/icons8-person-30.svg',
                     tital: 'Person')),
             BottomNavigationBarItem(
-                label: 'History',
+                label: 'CheckIn',
                 icon: iconNavigation(
                     image: 'assets/Icons/icons8-logout-rounded-100 (1).svg',
                     tital: 'History')),

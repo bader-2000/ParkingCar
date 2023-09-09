@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/provider/controller.dart';
-import 'package:flutter_application_1/seccren/PagePersonal/PersonalSeccren.dart';
+import 'package:flutter_application_1/seccren/Auth/Screen/login.dart';
+import 'package:flutter_application_1/seccren/PageCheckIn/CheckInSeccren.dart';
+import 'package:flutter_application_1/seccren/PageHistory/HistorySeccren.dart';
+import 'package:flutter_application_1/seccren/PageSingIn/seccrenSingIn.dart';
 import 'package:flutter_application_1/seccren/PageSplach/Seplash.dart';
-
 import 'package:provider/provider.dart';
 
 void main() {
@@ -21,14 +23,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'parkinCar',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
       home: Seplash(),
+      // HistorySeccren(),
+
       // personSeccren(),
-      //  Seplash(),
 
       //on_Borading_screen(),
 

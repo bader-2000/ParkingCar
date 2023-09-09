@@ -54,7 +54,7 @@ dev_dependencies:
   flutter_translate: ^4.0.4
   
 flutter_icons:
-  android: true
+  android: false
   ios: true
   image_path: "assets/images/park3.png"
 
